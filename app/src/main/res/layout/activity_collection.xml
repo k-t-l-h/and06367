@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/activity_uc__btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/activity_uc__btn_3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="50dp"
+        app:srcCompat="@drawable/ic_list"
+        app:backgroundTint="@color/apicture"
+        android:onClick="onClickHome"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/activity_uc__btn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/activity_uc__btn_1"
+        android:layout_margin="50dp"
+        app:backgroundTint="@color/apicture"
+        app:srcCompat="@android:drawable/ic_input_add"
+        />
+
+    <Button
+        android:id="@+id/activity_uc__el_2"
+        android:text="@string/default_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/apicture"
+        android:minHeight="80dp"
+        android:minWidth="280dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:onClick="collectionOpen"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_images"
+        app:layout_constraintTop_toTopOf="@+id/activity_uc__el_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
